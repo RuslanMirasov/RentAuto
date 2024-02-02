@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/RentAuto/static/css/main.e46f4df3.css",
+    "main.js": "/RentAuto/static/js/main.a2c0984c.js",
+    "static/css/228.d04a0373.chunk.css": "/RentAuto/static/css/228.d04a0373.chunk.css",
+    "static/js/228.a98008a2.chunk.js": "/RentAuto/static/js/228.a98008a2.chunk.js",
+    "static/css/805.d04a0373.chunk.css": "/RentAuto/static/css/805.d04a0373.chunk.css",
+    "static/js/805.19a067e2.chunk.js": "/RentAuto/static/js/805.19a067e2.chunk.js",
+    "static/css/875.d04a0373.chunk.css": "/RentAuto/static/css/875.d04a0373.chunk.css",
+    "static/js/875.0e17fc1b.chunk.js": "/RentAuto/static/js/875.0e17fc1b.chunk.js",
+    "static/css/395.d04a0373.chunk.css": "/RentAuto/static/css/395.d04a0373.chunk.css",
+    "static/js/395.303e5778.chunk.js": "/RentAuto/static/js/395.303e5778.chunk.js",
+    "static/media/heroDesctop.jpg": "/RentAuto/static/media/heroDesctop.2e3b47891205a200aa0d.jpg",
+    "index.html": "/RentAuto/index.html",
+    "main.e46f4df3.css.map": "/RentAuto/static/css/main.e46f4df3.css.map",
+    "main.a2c0984c.js.map": "/RentAuto/static/js/main.a2c0984c.js.map",
+    "228.d04a0373.chunk.css.map": "/RentAuto/static/css/228.d04a0373.chunk.css.map",
+    "228.a98008a2.chunk.js.map": "/RentAuto/static/js/228.a98008a2.chunk.js.map",
+    "805.d04a0373.chunk.css.map": "/RentAuto/static/css/805.d04a0373.chunk.css.map",
+    "805.19a067e2.chunk.js.map": "/RentAuto/static/js/805.19a067e2.chunk.js.map",
+    "875.d04a0373.chunk.css.map": "/RentAuto/static/css/875.d04a0373.chunk.css.map",
+    "875.0e17fc1b.chunk.js.map": "/RentAuto/static/js/875.0e17fc1b.chunk.js.map",
+    "395.d04a0373.chunk.css.map": "/RentAuto/static/css/395.d04a0373.chunk.css.map",
+    "395.303e5778.chunk.js.map": "/RentAuto/static/js/395.303e5778.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e46f4df3.css",
+    "static/js/main.a2c0984c.js"
+  ]
+}
