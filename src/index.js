@@ -7,7 +7,7 @@ import './index.scss';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/deutscher_wortschatz_frontend">
+    <BrowserRouter basename="/RentAuto">
       <PopupProvider>
         <App />
       </PopupProvider>

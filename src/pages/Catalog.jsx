@@ -1,15 +1,13 @@
-import { Title } from 'components/Typography';
 import Section from '../components/Section/Section';
+import { Title } from '../components/Typography';
 
-const Book = () => {
+const Catalog = () => {
   return (
-    <>
-      <Section background="https://wallpapercave.com/wp/wp1834599.jpg" full>
-        <Title tag="h1" size="h2">
-          Book name
-        </Title>
-      </Section>
-      {/* <Section full>
+    <Section background="#eee">
+      <Title tag="h1" size="h2">
+        Catalog
+      </Title>
+      {/* 
         <ButtonsList>
           <Button onClick={() => popupOpen('confirm')}>Confirm</Button>
           <Button onClick={() => popupOpen('error', 'error 404', 'Page not found')}>Error</Button>
@@ -18,9 +16,9 @@ const Book = () => {
           <Button onClick={() => popupOpen('registration')}>Registration</Button>
           <Button onClick={() => popupOpen('callback')}>Callback</Button>
         </ButtonsList>
-      </Section> */}
-    </>
+      */}
+    </Section>
   );
 };
 
-export default Book;
+export default Catalog;

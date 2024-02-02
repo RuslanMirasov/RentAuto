@@ -1,7 +1,7 @@
 .Overlay {
   display: inline-flex;
   flex-wrap: wrap;
-  width: 100%;
+
   align-items: center;
   align-content: center;
 }
@@ -14,9 +14,9 @@
 //DESCTOP STYLES
 @media screen and (min-width: 1024px) {
   .Overlay {
+    margin-left: auto;
     justify-content: center;
     position: relative;
-    margin: 0px 30px;
   }
   .Navigation {
     display: flex;
@@ -34,6 +34,7 @@
     overflow: hidden;
     right: 0px;
     top: 0px;
+    width: 100%;
     height: 100%;
     transition: 200ms linear 300ms;
     background: rgba(133, 133, 133, 0.5);

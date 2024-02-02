@@ -14,6 +14,7 @@ $burger_size_mobil: 24px;
   border: none;
   background: none;
   cursor: pointer;
+  z-index: 4;
   span,
   &:before,
   &:after {

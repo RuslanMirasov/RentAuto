@@ -3,20 +3,31 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout/Layout';
 
 const Home = lazy(() => import('pages/Home'));
-const Book = lazy(() => import('pages/Book'));
-const Thema = lazy(() => import('pages/Thema'));
-const Words = lazy(() => import('pages/Words'));
 const NotFound = lazy(() => import('pages/NotFound'));
+const Catalog = lazy(() => import('pages/Catalog'));
+const Favorites = lazy(() => import('pages/Favorites'));
 
 const App = () => {
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
+      <Route path="/">
         <Route index element={<Home />} />
-        <Route path="/books" element={<Home />} />
-        <Route path="/books/:bookId" element={<Book />} />
-        <Route path="/books/:bookId/:themId" element={<Thema />} />
-        <Route path="/books/:bookId/:themId/:wordId" element={<Words />} />
+        <Route
+          path="/catalog"
+          element={
+            <Layout>
+              <Catalog />
+            </Layout>
+          }
+        />
+        <Route
+          path="/favorites"
+          element={
+            <Layout>
+              <Favorites />
+            </Layout>
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

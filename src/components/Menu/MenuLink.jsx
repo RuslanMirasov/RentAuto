@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { usePopup } from 'contexts/PopupContext';
 
-const MenuLink = ({ to, text, onClick, children }) => {
+const MenuLink = ({ to, onClick, children }) => {
   const { menuClose } = usePopup();
 
   const handleClick = () => {
@@ -14,10 +14,9 @@ const MenuLink = ({ to, text, onClick, children }) => {
 
   return (
     <li>
-      <Link to={to} onClick={handleClick}>
-        {text}
-      </Link>
-      {children}
+      <NavLink to={to} onClick={handleClick}>
+        {children}
+      </NavLink>
     </li>
   );
 };

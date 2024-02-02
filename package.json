@@ -1,8 +1,8 @@
 {
-  "name": "deutscher_wortschatz",
+  "name": "rent_auto",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://RuslanMirasov.github.io/deutscher_wortschatz_frontend/",
+  "homepage": "https://RuslanMirasov.github.io/RentAuto/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
     "@testing-library/jest-dom": "^5.16.3",

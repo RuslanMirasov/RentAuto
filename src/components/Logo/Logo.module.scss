@@ -5,25 +5,18 @@
   align-items: center;
   position: relative;
   z-index: 2;
-}
-
-.Logo img {
-  width: 34px;
-  height: 34px;
+  svg {
+    color: var(--main-color);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 80px;
+  }
 }
 
 .LogoText {
+  display: inline-block;
   padding-left: 10px;
+  font-size: 18px;
   font-weight: 800;
   color: inherit;
   line-height: 1.1;
-}
-
-.LogoText p {
-  display: inline-block;
-  font-size: 18px;
-  font-weight: 600;
-  span {
-    color: var(--yellow-color);
-  }
 }

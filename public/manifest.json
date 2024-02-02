@@ -1,6 +1,6 @@
 {
-  "short_name": "WortKraft",
-  "name": "App zum Lernen deutscher Wörter",
+  "short_name": "Rent Auto",
+  "name": "Car rental services in Ukraine",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#121417",
   "background_color": "#ffffff"
 }

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { usePopup } from 'contexts/PopupContext';
 import css from './Burger.module.scss';
 
-const Burger = ({ children }) => {
+const Burger = () => {
   const [isOpen, setIsOpen] = useState();
   const { isOpenMenu, menuToggle, isMobile } = usePopup();
 

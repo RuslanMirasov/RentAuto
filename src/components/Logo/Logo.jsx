@@ -7,12 +7,8 @@ const Logo = () => {
   const { menuClose } = usePopup();
   return (
     <NavLink to="/" className={css.Logo} onClick={menuClose}>
-      <Icon name="logo" size={26} />
-      <div className={css.LogoText}>
-        <p>
-          Wort&nbsp;<span>Kraft</span>
-        </p>
-      </div>
+      <Icon name="logo" size={40} />
+      <p className={css.LogoText}>RentAuto</p>
     </NavLink>
   );
 };

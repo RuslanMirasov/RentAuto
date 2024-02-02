@@ -1,36 +1,23 @@
 import Section from '../components/Section/Section';
-import { TitleBox, Title, Text } from 'components/Typography';
-import { Button, ButtonsList } from 'components/Buttons';
-import { usePopup } from 'contexts/PopupContext';
+import { TitleBox, Title } from 'components/Typography';
+import { Button } from 'components/Buttons';
+import heroBg from '../images/heroDesctop.jpg';
 
 const Home = () => {
-  const { popupOpen } = usePopup();
   return (
     <>
-      <Section
-        bg="https://www.schengenvisainfo.com/news/wp-content/uploads/2021/03/Germany-flag.jpg"
-        padTop="big"
-        padBottom="big"
-        mask="linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 43%, rgba(0,0,0,0.2) 100%)"
-        dark
-      >
+      <Section background={heroBg} full>
         <TitleBox>
-          <Title tag="h1" size="h2">
-            My site title
+          <Title tag="h1" size="h1">
+            BEST CAR <br />
+            FOR RENT <br />
+            TODAY
           </Title>
-          <Text size="big">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. <br />
-            Quis eaque est sed ut non rerum quasi itaque necessitatibus, <br />
-            sequi consequuntur? Aut excepturi at, sapiente debitis <br />
-            doloremque porro odit
-          </Text>
-          <ButtonsList>
-            <Button to="./books/444">Unterrichten</Button>
-            <Button onClick={() => popupOpen('confirm', 'null', 'null')}>POPUP</Button>
-          </ButtonsList>
+          <Button to="./catalog" variant="border-dark">
+            Catalog
+          </Button>
         </TitleBox>
       </Section>
-      <Section full></Section>
     </>
   );
 };

@@ -1,27 +1,20 @@
 .Header {
+  display: flex;
   position: fixed;
+  flex-wrap: wrap;
   width: 100%;
-  padding: 14px 0px;
+  justify-content: center;
+  align-content: center;
+  height: 80px;
   color: var(--text-color);
   background: var(--white);
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  // border-bottom: 1px solid rgba(255, 255, 255, 0);
-  // backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.2);
   z-index: 10;
   &.fix {
     color: var(--text-color);
     background: var(--white);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 14px rgba(0, 0, 0, 0.2);
   }
-}
-
-.Container {
-  composes: container from 'index.scss';
-  display: flex;
-  width: 100%;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .HeaderUserInfo {

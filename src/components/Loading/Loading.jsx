@@ -7,7 +7,7 @@ const Loading = () => {
     <Oval
       height={40}
       width={40}
-      color="var(--green-color)"
+      color="var(--main-color)"
       wrapperStyle={loadingStyles}
       visible={true}
       ariaLabel="oval-loading"

@@ -1,13 +1,15 @@
 import css from './Footer.module.scss';
 import Logo from 'components/Logo/Logo';
+import Container from 'components/Container/Container';
 
-const Footer = ({ children }) => {
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className={css.Footer}>
-      <div className={css.Container}>
+      <Container>
         <Logo />
-        {children}
-      </div>
+        <p>&copy;{currentYear} All rights reserved</p>
+      </Container>
     </footer>
   );
 };
