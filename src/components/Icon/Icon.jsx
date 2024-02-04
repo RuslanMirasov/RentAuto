@@ -30,9 +30,9 @@ const Error = ({ size = 50, color }) => (
   </svg>
 );
 
-const SelectArrow = ({ size = 50, color }) => (
-  <svg width={size} viewBox="0 0 50 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M4 4L25 26L46 4" stroke={color} strokeWidth={8} strokeLinecap="round" />
+const SelectArrow = ({ size = 20, color }) => (
+  <svg width={size} height={size} viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 7.5L10 12.5L15 7.5" stroke="#121417" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
@@ -43,33 +43,20 @@ const Confirm = ({ size = 70, color }) => (
   </svg>
 );
 
-const Smile = ({ size = 70, color }) => (
-  <svg width={size} height={size} viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="25" cy="25" r="23.5" stroke={color} strokeWidth="3" />
-    <circle cx="15" cy="19" r="6.5" stroke={color} strokeWidth="3" />
-    <circle cx="34" cy="19" r="6.5" stroke={color} strokeWidth="3" />
+const Favorite = ({ size = 18, color, fill = 'none' }) => (
+  <svg width={size} height={size} viewBox="0 0 18 18" fill={fill} xmlns="http://www.w3.org/2000/svg">
     <path
-      d="M14.5951 19.3699C14.0491 19.3699 14.0644 18.6617 14.5397 18.5499C15.0494 18.43 15.334 19.0903 14.7946 19.2701"
+      d="M15.63 3.4575C15.2469 3.07425 14.7921 2.77023 14.2915 2.56281C13.7909 2.35539 13.2543 2.24863 12.7125 2.24863C12.1706 2.24863 11.634 2.35539 11.1334 2.56281C10.6329 2.77023 10.178 3.07425 9.79497 3.4575L8.99997 4.2525L8.20497 3.4575C7.4312 2.68373 6.38174 2.24903 5.28747 2.24903C4.19319 2.24903 3.14374 2.68373 2.36997 3.4575C1.5962 4.23127 1.1615 5.28072 1.1615 6.375C1.1615 7.46927 1.5962 8.51873 2.36997 9.2925L3.16497 10.0875L8.99997 15.9225L14.835 10.0875L15.63 9.2925C16.0132 8.90943 16.3172 8.45461 16.5247 7.95401C16.7321 7.45342 16.8388 6.91686 16.8388 6.375C16.8388 5.83313 16.7321 5.29657 16.5247 4.79598C16.3172 4.29539 16.0132 3.84056 15.63 3.4575Z"
       stroke={color}
-      strokeWidth="3"
+      strokeOpacity="1"
+      strokeWidth="1.5"
       strokeLinecap="round"
-    />
-    <path
-      d="M33.643 19.669C33.643 19.271 33.522 18.8802 33.8868 18.6718C34.064 18.5705 34.7253 18.4252 34.74 18.7937C34.756 19.1934 34.4392 20.0578 33.8979 19.7134C33.4912 19.4545 33.3524 18.7354 33.8425 18.572"
-      stroke={color}
-      strokeWidth="3"
-      strokeLinecap="round"
-    />
-    <path
-      d="M13.9968 33.8303C14.2495 33.8584 14.4194 34.2555 14.5508 34.4342C15.011 35.0601 15.5327 35.6597 16.2018 36.0686C17.9513 37.1377 19.9323 38.2386 21.9749 38.595C23.6042 38.8793 25.348 38.389 26.9391 38.0853C28.283 37.8289 29.6953 37.7841 30.8229 36.9218C32.3622 35.7447 33.5819 33.8067 34.3411 32.0352"
-      stroke={color}
-      strokeWidth="3"
-      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
 
-const Icon = ({ name, color = 'currentColor', ...props }) => {
+const Icon = ({ name, color = 'currentColor', fill = 'none', ...props }) => {
   return (
     <>
       {!name && <Default color={color} {...props} />}
@@ -77,7 +64,7 @@ const Icon = ({ name, color = 'currentColor', ...props }) => {
       {name === 'error' && <Error color={color} {...props} />}
       {name === 'confirm' && <Confirm color={color} {...props} />}
       {name === 'select-arrow' && <SelectArrow color={color} {...props} />}
-      {name === 'smile' && <Smile color={color} {...props} />}
+      {name === 'favorites' && <Favorite color={color} fill={fill} {...props} />}
     </>
   );
 };

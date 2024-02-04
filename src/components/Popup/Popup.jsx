@@ -3,23 +3,17 @@ import { CloseButton } from 'components/Buttons';
 import { usePopup } from 'contexts/PopupContext';
 import PopupError from './PopupError';
 import PopupConfirm from './PopupConfirm';
-import PopupRequest from './PopupRequest';
-import PopupCallback from './PopupCallback';
-import PopupLogin from './PopupLogin';
-import PopupRegistration from './PopupRegistration';
+import PopupCar from './PopupCar';
 import './Popup.scss';
 
 const Popup = () => {
-  const { isPopupLoading, isOpenPopup, popupType, popupTitle, popupText, popupClose } = usePopup();
+  const { isPopupLoading, isOpenPopup, popupType, popupTitle, popupText, popupObject, popupClose } = usePopup();
 
   const popupContentClasses = {
     'popup-content': true,
-    'type-login': popupType === 'login',
-    'type-registration': popupType === 'registration',
-    'type-request': popupType === 'request',
-    'type-callback': popupType === 'callback',
     'type-error': popupType === 'error',
     'type-confirm': popupType === 'confirm',
+    'type-car': popupType === 'car',
     'is-loading': isPopupLoading,
   };
 
@@ -35,10 +29,7 @@ const Popup = () => {
             <CloseButton onClick={popupClose} />
             {popupType === 'error' && <PopupError title={popupTitle} text={popupText} />}
             {popupType === 'confirm' && <PopupConfirm title={popupTitle} text={popupText} />}
-            {popupType === 'request' && <PopupRequest title={popupTitle} text={popupText} />}
-            {popupType === 'callback' && <PopupCallback />}
-            {popupType === 'login' && <PopupLogin />}
-            {popupType === 'registration' && <PopupRegistration />}
+            {popupType === 'car' && <PopupCar car={popupObject} />}
           </div>
         </div>
       )}

@@ -1,0 +1,24 @@
+.CarImage {
+  display: block;
+  width: 100%;
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  z-index: 1;
+  background: #f3f3f2;
+  &:before {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 53.798%;
+  }
+  img {
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

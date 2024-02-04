@@ -8,10 +8,10 @@ const PopupConfirm = ({ title, text }) => {
   const { popupClose } = usePopup();
   return (
     <PopupAnimation>
-      <Icon name="confirm" color="var(--green-color)" />
+      <Icon name="confirm" color="var(--main-color)" />
       {title && (
         <>
-          <Title tag="h4" size="h6">
+          <Title tag="h2" size="h4">
             {title}
           </Title>
           <hr />

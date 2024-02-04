@@ -8,13 +8,14 @@ const PopupContext = createContext();
 export const usePopup = () => useContext(PopupContext);
 
 export const PopupProvider = ({ children }) => {
-  const [isMobile, setIsMobile] = useState();
+  const [isMobile, setIsMobile] = useState(false);
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isOpenPopup, setIsOpenPopup] = useState(false);
   const [isPopupLoading, setIsPopupLoading] = useState(false);
   const [popupType, setPopupType] = useState(defaultPopupType);
   const [popupTitle, setPopupTitle] = useState('');
   const [popupText, setPopupText] = useState('');
+  const [popupObject, setPopupObject] = useState({});
   const containerRef = useRef();
 
   // SCREEN WIDTH CHECK
@@ -59,7 +60,7 @@ export const PopupProvider = ({ children }) => {
     setIsPopupLoading(false);
   };
 
-  //MENU TOGGLE AND CLOSE
+  //MENU TOGGLE
   const menuToggle = () => {
     bodyLock(window.innerWidth - document.body.clientWidth);
     setIsOpenMenu(!isOpenMenu);
@@ -68,13 +69,14 @@ export const PopupProvider = ({ children }) => {
     }
   };
 
+  //MENU CLOSE
   const menuClose = () => {
     setIsOpenMenu(false);
     bodyUnlock();
   };
 
-  //POPUP OPEN AND CLOSE
-  const popupOpen = (type, title, text) => {
+  //POPUP OPEN
+  const popupOpen = (type, title, text, object = {}) => {
     setIsOpenPopup(true);
     if (!isOpenMenu || !isOpenPopup) {
       bodyLock(window.innerWidth - document.body.clientWidth);
@@ -82,11 +84,13 @@ export const PopupProvider = ({ children }) => {
     setPopupType(type);
     title && setPopupTitle(title);
     text && setPopupText(text);
+    object && setPopupObject(object);
     setTimeout(() => {
       showPopup();
     }, 1);
   };
 
+  //POPUP CLOSE
   const popupClose = () => {
     hidePopup();
     setTimeout(() => {
@@ -94,6 +98,7 @@ export const PopupProvider = ({ children }) => {
       setPopupType(defaultPopupType);
       setPopupTitle('');
       setPopupText('');
+      setPopupObject({});
       if (!isOpenMenu) {
         bodyUnlock();
       }
@@ -111,6 +116,7 @@ export const PopupProvider = ({ children }) => {
         popupType,
         popupTitle,
         popupText,
+        popupObject,
         setLoading,
         unsetLoading,
         popupClose,

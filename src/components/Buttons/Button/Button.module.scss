@@ -9,13 +9,13 @@
   font-family: inherit;
   font-size: 14px;
   font-weight: 600;
-
+  background: var(--main-color);
+  color: var(--white);
   min-height: 44px;
   border-radius: 12px;
   padding: 12px 50px;
-  color: #fff;
-  background: var(--main-color);
-  transition: background-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
+
+  transition: opacity 0.3s, background-color 0.3s, color 0.3s, transform 0.2s, box-shadow 0.2s;
   border: none;
   outline: none;
   opacity: 1;
@@ -23,17 +23,34 @@
   transform: translate(0px, 0px);
   user-select: none;
   &:disabled {
-    opacity: 0.5;
+    opacity: 0.2;
+    cursor: auto;
   }
   &:active {
     transform: translate(0px, 2px);
+    &:disabled {
+      transform: translate(0px, 0px);
+    }
   }
   &:hover,
   &:focus {
     background: var(--main-color-hover);
+    &:disabled {
+      background: var(--main-color);
+    }
   }
 }
 
 .Full {
   width: 100%;
+}
+
+.White {
+  background: var(--white);
+  color: var(--text-color);
+  &:hover,
+  &:focus {
+    background: var(--text-color);
+    color: var(--white);
+  }
 }

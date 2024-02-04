@@ -1,7 +1,7 @@
 import css from './Title.module.scss';
 
 const Title = ({ tag, size, children }) => {
-  const Tag = tag || 'div';
+  const Tag = tag || 'b';
   const titleClasses = {
     [css.Title]: true,
     [css.TitleH1]: size === 'h1',

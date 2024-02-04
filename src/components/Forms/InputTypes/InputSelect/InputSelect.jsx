@@ -1,6 +1,5 @@
 import Icon from 'components/Icon/Icon';
 import { useState, useRef, useEffect } from 'react';
-import { validateInput } from 'utils/formFunctions';
 import css from '../InputText/InputText.module.scss';
 
 const InputSelect = ({ name, label, placeholder, required, options, value = '', onChange }) => {
@@ -11,13 +10,16 @@ const InputSelect = ({ name, label, placeholder, required, options, value = '', 
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (selectValue) {
-      validateInput(selectInputRef.current);
-    }
-  }, [selectValue]);
+    setSelectValue(value);
+  }, [value]);
 
-  const handleOptionClick = (key, val) => {
-    setSelectValue(key);
+  const handleOptionClick = val => {
+    setSelectValue(val);
+    onChange({ target: { name, value: val } }); // Убедитесь, что передаете актуальное значение
+    if (name === 'price') {
+      setSelectValueText(`${val} $`);
+      return;
+    }
     setSelectValueText(val);
   };
 
@@ -46,13 +48,13 @@ const InputSelect = ({ name, label, placeholder, required, options, value = '', 
         <div className={css.Input} onClick={handleOpen}>
           {!selectValue ? <span className={css.Placeholder}>{placeholder}</span> : <span className={css.InputText}>{selectValueText}</span>}
           <div className={css.SelectArrow}>
-            <Icon name="select-arrow" color="#a3a3a3" />
+            <Icon name="select-arrow" color="var(--text-color)" />
           </div>
           {options && (
             <div className={`${css.Options} ${isOpen ? css.open : ''} custom-scrollbar`}>
               <ul className={`custom-scrollbar`}>
                 {Object.keys(options).map(key => (
-                  <li key={key} datavalue={key} onClick={() => handleOptionClick(key, options[key])}>
+                  <li key={key} datavalue={key} onClick={() => handleOptionClick(options[key])}>
                     {options[key]}
                   </li>
                 ))}

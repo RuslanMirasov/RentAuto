@@ -1,0 +1,9 @@
+.CarList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  gap: 8px;
+}

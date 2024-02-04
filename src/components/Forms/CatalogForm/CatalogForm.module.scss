@@ -1,0 +1,40 @@
+.FormWrapper {
+  display: block;
+  width: 100%;
+  max-width: 859px;
+  margin: 0 auto;
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    width: 100%;
+    gap: 18px;
+    > label {
+      &:nth-child(1) {
+        width: 224px;
+      }
+      &:nth-child(2) {
+        width: 125px;
+      }
+    }
+  }
+  fieldset {
+    width: 320px;
+    label {
+      input {
+        border-radius: 14px 0px 0px 14px;
+      }
+      &:last-child {
+        input {
+          border-radius: 0px 14px 14px 0px;
+          border-left: 1px solid rgba(138, 138, 137, 0.2);
+        }
+      }
+    }
+  }
+  button {
+    width: 136px;
+    height: 50px;
+    padding: 12px 50px;
+  }
+}

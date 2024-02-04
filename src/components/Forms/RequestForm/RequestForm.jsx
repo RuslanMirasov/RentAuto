@@ -13,7 +13,6 @@ const RequestForm = () => {
     for (const [key, value] of formData.entries()) {
       formObject[key] = value;
     }
-    console.log(formObject);
 
     setTimeout(() => {
       unsetLoading();

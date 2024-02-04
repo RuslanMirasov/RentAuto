@@ -1,10 +1,11 @@
 import { NavLink } from 'react-router-dom';
 import css from './Button.module.scss';
 
-const Button = ({ to, onClick, full, blank, disabled, children }) => {
+const Button = ({ to, onClick, full, variant, blank, disabled, children }) => {
   const allButtonClasses = {
     [css.Button]: true,
     [css.Full]: full,
+    [css.White]: variant === 'white',
   };
 
   const currentClasses = Object.keys(allButtonClasses)

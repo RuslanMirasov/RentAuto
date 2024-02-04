@@ -1,0 +1,17 @@
+.List {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  gap: 4px 0px;
+  line-height: 1;
+  color: var(--gray2);
+  margin-left: -4px;
+  max-width: 400px;
+  li {
+    border-right: 1px solid rgba(18, 20, 23, 0.1);
+    padding: 0px 6px;
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
