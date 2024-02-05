@@ -3,9 +3,9 @@ import { Route, Routes } from 'react-router-dom';
 import { Layout } from './Layout/Layout';
 
 const Home = lazy(() => import('pages/Home'));
-const NotFound = lazy(() => import('pages/NotFound'));
 const Catalog = lazy(() => import('pages/Catalog'));
 const Favorites = lazy(() => import('pages/Favorites'));
+const NotFound = lazy(() => import('pages/NotFound'));
 
 const App = () => {
   return (

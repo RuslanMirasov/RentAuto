@@ -4,12 +4,12 @@ import { Form, Input, Fieldset } from '..';
 import { brends } from '../../../api/brends';
 import css from './CatalogForm.module.scss';
 
-const CatalogForm = () => {
+const CatalogForm = ({ filterCars }) => {
   const [brendsList] = useState(brends);
   const [priceList, setPriceList] = useState([]);
   const [formValues, setFormValues] = useState({
-    brend: '',
-    price: '',
+    make: '',
+    rentalPrice: '',
     from: '',
     to: '',
   });
@@ -30,17 +30,17 @@ const CatalogForm = () => {
       const newPriceList = generatePriceList(fromNumber, toNumber);
       setFormValues(prevValues => ({
         ...prevValues,
-        price: '',
+        rentalPrice: '',
       }));
       setPriceList(newPriceList);
     }
   }, [formValues.from, formValues.to]);
 
   const handleSubmit = e => {
-    console.log(formValues);
+    filterCars(formValues);
     setFormValues({
-      brend: '',
-      price: '',
+      make: '',
+      rentalPrice: '',
       from: '',
       to: '',
     });
@@ -63,20 +63,20 @@ const CatalogForm = () => {
       <Form onSubmit={handleSubmit}>
         <Input
           type="select"
-          name="brend"
+          name="make"
           label="Car brand"
           placeholder="Select the make"
           options={brendsList}
-          value={formValues.brend}
+          value={formValues.make}
           onChange={handleChange}
         />
         <Input
           type="select"
-          name="price"
+          name="rentalPrice"
           label="Price/ 1 hour"
           placeholder="To $"
           options={priceList}
-          value={formValues.price}
+          value={formValues.rentalPrice}
           onChange={handleChange}
         />
         <Fieldset col="2" label="Сar mileage / km">

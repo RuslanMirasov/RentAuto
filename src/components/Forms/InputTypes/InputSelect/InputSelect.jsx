@@ -15,12 +15,13 @@ const InputSelect = ({ name, label, placeholder, required, options, value = '', 
 
   const handleOptionClick = val => {
     setSelectValue(val);
-    onChange({ target: { name, value: val } }); // Убедитесь, что передаете актуальное значение
-    if (name === 'price') {
+    if (name === 'rentalPrice') {
       setSelectValueText(`${val} $`);
+      onChange({ target: { name, value: val } });
       return;
     }
     setSelectValueText(val);
+    onChange({ target: { name, value: val } });
   };
 
   const handleOpen = () => {

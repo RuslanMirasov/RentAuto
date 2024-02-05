@@ -1,6 +1,6 @@
 import { Oval } from 'react-loader-spinner';
 
-const loadingStyles = { justifyContent: 'center', alignItems: 'center', height: '100%', margin: 'auto', padding: '50px 20px' };
+const loadingStyles = { justifyContent: 'center', alignItems: 'center', margin: '50px  auto  0px auto', padding: '50px 20px' };
 
 const Loading = () => {
   return (
